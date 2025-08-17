@@ -27,7 +27,7 @@ app.use(
 // Login page (GET)
 app.get("/login", (req, res) => {
   if (req.session.loggedIn) {
-    return res.redirect("/messages.html");
+    return res.redirect("/admin");
   }
   res.send(`
     <!DOCTYPE html>
