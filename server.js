@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
+const session = require("express-session");
 
 const app = express();
 const port = 3000;
@@ -13,11 +14,21 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); // for login form
 app.use(express.static(path.join(__dirname, "public")));
 
-// Simple session (in-memory for demo)
-let isLoggedIn = false;
+// Session setup (each user gets their own session)
+app.use(
+  session({
+    secret: "supersecretkey", // change this to something random
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 1000 * 60 * 60 }, // 1 hour
+  })
+);
 
 // Login page (GET)
 app.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    return res.redirect("/messages.html");
+  }
   res.send(`
     <!DOCTYPE html>
     <html>
@@ -50,10 +61,17 @@ app.post("/login", (req, res) => {
   const { username, password } = req.body;
 
   if (username === "admin" && password === "admin@cek") {
-    isLoggedIn = true;
+    req.session.loggedIn = true;
     return res.redirect("/messages.html");
   }
   res.send("<h2 style='color:red'>❌ Invalid Credentials</h2><a href='/login'>Try Again</a>");
+});
+
+// Logout route
+app.get("/logout", (req, res) => {
+  req.session.destroy(() => {
+    res.redirect("/login");
+  });
 });
 
 // Save messages to a plain text file
@@ -77,6 +95,10 @@ app.post("/contact", (req, res) => {
 
 // Clear all messages
 app.post("/clear-messages", (req, res) => {
+  if (!req.session.loggedIn) {
+    return res.status(403).json({ message: "Unauthorized" });
+  }
+
   try {
     fs.writeFileSync("messages.txt", "", "utf8");
     res.json({ message: "🗑️ All messages cleared!" });
@@ -88,7 +110,7 @@ app.post("/clear-messages", (req, res) => {
 
 // Render messages.html (only if logged in)
 app.get("/messages.html", (req, res) => {
-  if (!isLoggedIn) {
+  if (!req.session.loggedIn) {
     return res.redirect("/login");
   }
 
@@ -124,6 +146,7 @@ app.get("/messages.html", (req, res) => {
           cursor: pointer;
         }
         button:hover { background: darkred; }
+        a { display:block; margin-top:20px; color:#0ff; }
       </style>
     </head>
     <body>
@@ -132,6 +155,7 @@ app.get("/messages.html", (req, res) => {
       <form id="clearForm" method="POST" action="/clear-messages">
         <button type="submit">Clear All Messages</button>
       </form>
+      <a href="/logout">🚪 Logout</a>
       <script>
         document.getElementById("clearForm").addEventListener("submit", async (e) => {
           e.preventDefault();
