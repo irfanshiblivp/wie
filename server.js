@@ -31,14 +31,38 @@ app.post("/contact", (req, res) => {
   }
 });
 
-// Simple page to view messages
-app.get("/messages", (req, res) => {
-  if (!fs.existsSync("messages.txt")) {
-    return res.send("<h2>No messages yet</h2>");
+// Render messages.html with content of messages.txt
+app.get("/messages.html", (req, res) => {
+  let content = "<h2>No messages yet</h2>";
+
+  if (fs.existsSync("messages.txt")) {
+    const data = fs.readFileSync("messages.txt", "utf8");
+    content = `<pre>${data}</pre>`;
   }
 
-  const data = fs.readFileSync("messages.txt", "utf8");
-  res.send(`<pre>${data}</pre>`);
+  res.send(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Messages</title>
+      <style>
+        body { font-family: monospace; background: #111; color: #0f0; padding: 20px; }
+        h2 { color: #0ff; }
+        pre { 
+          white-space: pre-wrap; 
+          border: 1px solid #444; 
+          padding: 15px; 
+          border-radius: 8px; 
+          background: #222; 
+        }
+      </style>
+    </head>
+    <body>
+      <h2>Saved Messages</h2>
+      ${content}
+    </body>
+    </html>
+  `);
 });
 
 // Start server
