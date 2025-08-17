@@ -86,7 +86,7 @@ app.post("/contact", (req, res) => {
 
   try {
     fs.appendFileSync("messages.txt", entry, "utf8");
-    res.json({ message: "✅ Message saved successfully to messages.txt!" });
+    res.json({ message: "✅ Message stored successfully.." });
   } catch (err) {
     console.error("❌ File Write Error:", err);
     res.status(500).json({ message: "Error saving message" });
@@ -109,7 +109,7 @@ app.post("/clear-messages", (req, res) => {
 });
 
 // Render messages.html (only if logged in)
-app.get("/messages.html", (req, res) => {
+app.get("/admin", (req, res) => {
   if (!req.session.loggedIn) {
     return res.redirect("/login");
   }
