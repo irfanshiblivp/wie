@@ -1,0 +1,219 @@
+<!doctype html>  
+<html lang="en" data-theme="midnight" data-pack="magenta">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IEEE WIE & SBCEK — Achievements</title>
+  <meta name="description" content="Achievements and milestones of IEEE Women in Engineering and IEEE SB CEK." />
+  <link rel="icon" href="assets/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Sora:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/hero.webp" as="image" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <svg class="loader-hero" width="148" height="148" viewBox="0 0 148 148" role="img" aria-label="WIE Engineer">
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="var(--g1)"/>
+            <stop offset="1" stop-color="var(--g2)"/>
+          </linearGradient>
+          <linearGradient id="lg2" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="var(--g3)"/>
+            <stop offset="1" stop-color="var(--g2)"/>
+          </linearGradient>
+        </defs>
+        <circle cx="74" cy="74" r="68" fill="none" stroke="url(#lg)" stroke-width="2" opacity=".6"/>
+        <path d="M45,64 q18,-28 38,0 q5,8 3,18 q-3,14 -21,22 q-18,-8 -21,-22 q-2,-10 1,-18z" fill="url(#lg)" opacity=".9">
+          <animate attributeName="d" dur="4s" repeatCount="indefinite"
+            values="M45,64 q18,-28 38,0 q5,8 3,18 q-3,14 -21,22 q-18,-8 -21,-22 q-2,-10 1,-18z;
+                    M43,62 q20,-30 40,2 q6,8 2,18 q-4,14 -21,22 q-17,-7 -22,-22 q-3,-10 1,-20z;
+                    M45,64 q18,-28 38,0 q5,8 3,18 q-3,14 -21,22 q-18,-8 -21,-22 q-2,-10 1,-18z"/>
+        </path>
+        <path d="M92 88 l18 10" stroke="url(#lg2)" stroke-width="4" stroke-linecap="round"/>
+        <g>
+          <circle cx="112" cy="98" r="2.5" fill="var(--spark)">
+            <animate attributeName="r" values="1.5;3;1.5" dur="1s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="107" cy="95" r="1.8" fill="var(--spark)">
+            <animate attributeName="r" values="1;2.4;1" dur="1.1s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </svg>
+      <div class="typing">Celebrating <span>Excellence</span> & <span>Innovation</span></div>
+      <div class="loadbar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- Floating Particles -->
+  <canvas id="bgParticles" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main">Skip to content</a>
+  
+  <!-- NAV -->
+  <header class="site-header" aria-label="Primary">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="IEEE WIE Home">
+        <img src="assets/logo.png" alt="IEEE WIE Logo" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-top">IEEE</span>
+          <span class="brand-bottom">Women in Engineering</span>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="navMenu" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#global">Global Activities</a></li>
+          <li><a href="index.html#college">College Activities</a></li>
+          <li><a href="achievements.html" class="active">Achievements</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#contact" class="btn btn-gradient magnet">Join / Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="edge-wave" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy sr">
+          <h1 class="glow">Our <span class="gradient-text">Achievements</span></h1>
+          <p class="lead">Highlighting milestones of IEEE Women in Engineering and IEEE SB CEK community.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOBAL ACHIEVEMENTS -->
+    <section id="global-achievements" class="section alt">
+      <div class="container">
+        <header class="section-header sr">
+          <h2>Global WIE Achievements</h2>
+          <p>Celebrating global recognition, impactful programs, and awards.</p>
+        </header>
+        <div class="cards three">
+          <article class="card neon-border tilt sr">
+            <h3>WIE Inspiring Member Awards</h3>
+            <p>Recognizing women leaders across continents who push boundaries in science, technology, and education.</p>
+          </article>
+          <article class="card neon-border tilt sr">
+            <h3>IEEE Fellow Elevations</h3>
+            <p>Several WIE members elevated to IEEE Fellow status for pioneering contributions in computing, healthcare, and energy.</p>
+          </article>
+          <article class="card neon-border tilt sr">
+            <h3>Global Outreach Impact</h3>
+            <p>WIE STAR Program engaged over 50,000+ students worldwide in STEM mentoring initiatives.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLLEGE ACHIEVEMENTS -->
+    <section id="college-achievements" class="section">
+      <div class="container">
+        <header class="section-header sr">
+          <h2>IEEE SB CEK Achievements</h2>
+          <p>Remarkable recognitions, awards, and contributions from our student branch.</p>
+        </header>
+        <div class="timeline">
+          <article class="t-item sr-left">
+            <div class="t-dot"></div>
+            <div class="t-card glass">
+              <h3>Best Student Branch Award</h3>
+              <p>IEEE SB CEK was honored with Kerala Section’s Best Student Branch award for its consistent innovations and outreach programs.</p>
+            </div>
+          </article>
+          <article class="t-item sr-right">
+            <div class="t-dot"></div>
+            <div class="t-card glass">
+              <h3>Global Hackathon Recognition</h3>
+              <p>Team from SB CEK secured top positions in international hackathons such as Luxathon and EPICS competitions.</p>
+            </div>
+          </article>
+          <article class="t-item sr-left">
+            <div class="t-dot"></div>
+            <div class="t-card glass">
+              <h3>Flagship Conference Success</h3>
+              <p>IPRECON 2020 and its successors positioned SB CEK as a global hub for renewable energy and sustainable innovations.</p>
+            </div>
+          </article>
+          <article class="t-item sr-right">
+            <div class="t-dot"></div>
+            <div class="t-card glass">
+              <h3>Community Impact</h3>
+              <p>Through IEEE EPICS, students developed clean energy projects and social-impact technology solutions for local communities.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEMBER ACHIEVEMENTS -->
+    <section id="member-achievements" class="section alt">
+      <div class="container">
+        <header class="section-header sr">
+          <h2>Individual Member Achievements</h2>
+          <p>Spotlighting our members’ successes in research, innovation, and leadership.</p>
+        </header>
+        <div class="cards three">
+          <article class="card neon-border tilt sr">
+            <h3>Research Publications</h3>
+            <p>SB CEK members published papers in IEEE Xplore and international journals on AI, IoT, and sustainable energy.</p>
+          </article>
+          <article class="card neon-border tilt sr">
+            <h3>Scholarships & Grants</h3>
+            <p>Many students received IEEE PES scholarships, WIE travel grants, and academic excellence fellowships.</p>
+          </article>
+          <article class="card neon-border tilt sr">
+            <h3>Leadership Roles</h3>
+            <p>SB CEK members hold key roles in IEEE Kerala Section, WIE AG Kerala, and global committees, influencing future policies.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <header class="section-header sr">
+          <h2>Join / Contact</h2>
+          <p>Connect with IEEE SB CEK or WIE to celebrate achievements and collaborate for future innovations.</p>
+        </header>
+        <form id="contactForm" novalidate>
+          <div class="grid two">
+            <label>Full Name<input type="text" name="name" autocomplete="name" required /></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+          </div>
+          <label>Message<textarea name="message" rows="5" required></textarea></label>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-gradient magnet">Send</button>
+            <p id="formStatus" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="IEEE WIE Logo" class="brand-logo small" />
+        <div><strong>IEEE WIE & SBCEK</strong><br/><small>© <span id="year"></span> All rights reserved.</small></div>
+      </div>
+      <ul class="social">
+        <li><a href="https://www.facebook.com/ieeewomeninengineering/" aria-label="Facebook">Facebook</a></li>
+        <li><a href="https://www.instagram.com/ieeewomeninengineering/" aria-label="Instagram">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/groups/7426706/profile" aria-label="LinkedIn">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
