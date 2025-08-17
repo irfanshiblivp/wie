@@ -62,7 +62,7 @@ app.post("/login", (req, res) => {
 
   if (username === "admin" && password === "admin@cek") {
     req.session.loggedIn = true;
-    return res.redirect("/messages.html");
+    return res.redirect("/admin");
   }
   res.send("<h2 style='color:red'>❌ Invalid Credentials</h2><a href='/login'>Try Again</a>");
 });
