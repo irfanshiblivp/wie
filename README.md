@@ -130,7 +130,7 @@ College of Engineering Munnar
 
 +91 7907240268
 
-[LinkedIn](https://linkedin.com/in/irfanshibli)
-[Github](https://github.com/irfanshiblivp)
-[Gmail](mailto:vp.irfanshibli@gmail.com)
+[LinkedIn](https://linkedin.com/in/irfanshibli) | 
+[Github](https://github.com/irfanshiblivp) | 
+[Gmail](mailto:vp.irfanshibli@gmail.com) | 
 [WhatsApp](https://wa.me/917907240268?text=Hi)
