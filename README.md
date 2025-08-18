@@ -5,7 +5,7 @@ This is the official **Website for IEEE Women in Engineering (WIE), College of E
 The website has been carefully crafted with a **feminine touch, elegant UI, and smooth animations** to represent the vision and energy of WIE.
 
 ✨ Live Demo: [Click Here](https://wiesbcek.onrender.com)  
-📂 GitHub Repository: [wie](https://github.com/irfanshiblivp/wie)
+📂 GitHub Repository: [irfanshiblivp/wie](https://github.com/irfanshiblivp/wie)
 
 ---
 
