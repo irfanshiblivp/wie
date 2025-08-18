@@ -94,27 +94,31 @@ After logging in, you can see all messages stored by the website.
 
 ## 🖼️ Screenshots
 
-### 🏠 Homepage
+### 🏠 Homepage (PC View)
 
-![Homepage Screenshot](link-to-homepage-screenshot)
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/0319f43c-16b5-48ba-b6f9-971854eaf074" />
 
-### 👩‍💻 About Page
 
-![About Screenshot](link-to-about-screenshot)
+### 👩‍💻 About Page (Mobile View)
 
-### 🏆 Achievements
+<img width="574" height="1280" alt="image" src="https://github.com/user-attachments/assets/bca6ba7c-2fae-4c28-b4e8-5b5029f23cf5" />
 
-![Achievements Screenshot](link-to-achievements-screenshot)
 
-### 📋 Activities
+### 📋 Activities (Tab View)
 
-![Activities Screenshot](link-to-activities-screenshot)
+<img width="800" height="1255" alt="image" src="https://github.com/user-attachments/assets/fcdb9ab9-fd7e-43f2-916c-f74d21885008" />
 
-### 🔑 Admin Panel
 
-![Admin Panel Screenshot](link-to-admin-screenshot)
+### 🏆 Achievements (Mobile View)
 
-> ⚡ Replace the `link-to-...-screenshot` with actual image links from your GitHub repo or external image hosting.
+<img width="574" height="1280" alt="image" src="https://github.com/user-attachments/assets/1137fd80-ae32-4719-8a53-dd83ac82511a" />
+
+
+### 🔑 Admin Panel (PC View)
+
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/03687ed1-cf40-4531-817f-94e6595a4d34" />
+
+
 
 ---
 
@@ -122,6 +126,7 @@ After logging in, you can see all messages stored by the website.
 
 👩‍💻 Developed by **MUHAMMED IRFAN SHIBILI VP**
 College of Engineering Munnar
+
 +91 7907240268
 
 LinkedIn: 
