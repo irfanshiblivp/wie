@@ -15,7 +15,7 @@ The website has been carefully crafted with a **feminine touch, elegant UI, and 
 - 🎨 **Beautiful Animations** – Smooth hover effects, transitions, and interactive components.  
 - 📂 **Multiple Pages** – About, Achievements, Activities, and more.  
 - 📨 **Contact Form** – Visitors can send messages directly through the site.  
-- 🔑 **Admin Panel** – Secure login for viewing user messages.  
+- 🔑 **Admin Panel** – Secure login for viewing user messages by using '/admin'.  
   - Username: `admin`  
   - Password: `admin@cek`  
 - ⚡ **Responsive Design** – Works across desktops, tablets, and mobiles.  
@@ -129,5 +129,4 @@ College of Engineering Munnar
 
 +91 7907240268
 
-LinkedIn: 
-https://linkedin.com/in/irfanshibli
+[LinkedIn](https://linkedin.com/in/irfanshibli)
