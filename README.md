@@ -1,5 +1,5 @@
 
-# 🌸 IEEE WIE Website – College of Engineering Karunagappally
+# IEEE WIE Website – College of Engineering Karunagappally
 
 This is the official **Website for IEEE Women in Engineering (WIE), College of Engineering Karunagappally (CEK)**, created as part of the **Website Design Competition**.  
 The website has been carefully crafted with a **feminine touch, elegant UI, and smooth animations** to represent the vision and energy of WIE.
@@ -51,7 +51,7 @@ wie/
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/irfanshiblivp/wie.git
+git clone https://github.com/irfanshiblivp/wie
 cd wie
 ````
 
@@ -123,4 +123,6 @@ After logging in, you can see all messages stored by the website.
 👩‍💻 Developed by **MUHAMMED IRFAN SHIBILI VP**
 College of Engineering Munnar
 +91 7907240268
+
 LinkedIn: 
+https://linkedin.com/in/irfanshibli
