@@ -229,23 +229,96 @@
       </div>
     </section>
 
-    <!-- GALLERY -->
-    <section id="gallery" class="section">
-      <div class="container">
-        <header class="section-header sr">
-          <h2>Gallery</h2>
-          <p>Snapshots from SBCEK IEEE events.</p>
-        </header>
-        <div class="gallery-grid">
-          <div class="skeleton"><img data-src="assets/1.jpeg" alt="WIE Day CEK"/></div>
-          <div class="skeleton"><img data-src="assets/2.jpeg" alt="Hackathon"/></div>
-          <div class="skeleton"><img data-src="assets/3.jpeg" alt="Leadership Summit"/></div>
-          <div class="skeleton"><img data-src="assets/4.jpeg" alt="Outreach"/></div>
-          <div class="skeleton"><img data-src="assets/5.jpeg" alt="Networking"/></div>
-          <div class="skeleton"><img data-src="assets/6.jpeg" alt="Global WIE Event"/></div>
-        </div>
-      </div>
-    </section>
+    <!-- NEW UPDATED GALLERY -->
+   <section id="gallery" class="section">
+  <div class="container">
+    <header class="section-header sr">
+      <h2>Gallery</h2>
+      <p>Snapshots from SBCEK IEEE events.</p>
+    </header>
+    <div class="gallery-grid">
+      <div class="skeleton"><img data-src="assets/1.jpeg" alt="WIE Day CEK"/></div>
+      <div class="skeleton"><img data-src="assets/2.jpeg" alt="Hackathon"/></div>
+      <div class="skeleton"><img data-src="assets/3.jpeg" alt="Leadership Summit"/></div>
+      <div class="skeleton"><img data-src="assets/4.jpeg" alt="Outreach"/></div>
+      <div class="skeleton"><img data-src="assets/5.jpeg" alt="Networking"/></div>
+      <div class="skeleton"><img data-src="assets/6.jpeg" alt="Global WIE Event"/></div>
+    </div>
+  </div>
+</section>
+
+<style>
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.gallery-grid .skeleton {
+  position: relative;
+  aspect-ratio: 16/10;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--glass, #111); /* fallback for dark theme */
+  border: 1px solid var(--stroke, #333);
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.06), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.gallery-grid img.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const imgs = document.querySelectorAll(".gallery-grid img");
+
+  imgs.forEach((img, i) => {
+    const src = img.getAttribute("data-src");
+    if (!src) return;
+
+    const tempImg = new Image();
+    tempImg.src = src;
+
+    tempImg.onload = () => {
+      setTimeout(() => {
+        img.src = src;
+        img.classList.add("loaded");
+        img.parentElement.classList.remove("skeleton");
+      }, i * 150); // stagger animation
+    };
+  });
+});
+</script>
+    
 
     <!-- CONTACT -->
     <section id="contact" class="section">
