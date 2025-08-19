@@ -189,6 +189,52 @@
 
     <!-- FAQS, JOIN CTA, FOOTER -->
     <!-- (unchanged code remains here) -->
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+  <div class="container">
+    <header class="section-header sr">
+      <h2>Join / Contact</h2>
+      <p>Want to collaborate, volunteer, or join IEEE SBCEK WIE?</p>
+    </header>
+    <form id="contactForm" aria-labelledby="contact">
+      <div class="grid two">
+        <label>Full Name
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+        <label>Email
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+      </div>
+      <label>Message
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-gradient magnet">Send</button>
+        <p id="formStatus" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+  const formData = {
+    name: this.name.value,
+    email: this.email.value,
+    message: this.message.value
+  };
+
+  const response = await fetch("/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData)
+  });
+
+  const result = await response.json();
+  document.getElementById("formStatus").textContent = result.message;
+});
+</script>
 
   </main>
 
